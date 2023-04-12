@@ -46,8 +46,7 @@ const Blog = () => {
             alert("SEO description should be between 1 to 200 characters");
             return;
         }
-        let localdata=[...JSON.parse(localStorage.getItem("blogData"))]
-        localdata=[...localdata,Data]
+        let localdata=[...JSON.parse(localStorage.getItem("blogData")),Data]
         localStorage.setItem("blogData", JSON.stringify(localdata));
         alert("Blog created successfully!");
         setData({
